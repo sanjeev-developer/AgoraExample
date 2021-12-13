@@ -181,7 +181,7 @@ public class JoinChannelAudio extends BaseFragment implements View.OnClickListen
          an audience can only receive streams.*/
         engine.setChannelProfile(Constants.CHANNEL_PROFILE_LIVE_BROADCASTING);
         /**In the demo, the default is to enter as the anchor.*/
-        engine.setClientRole(IRtcEngineEventHandler.ClientRole.CLIENT_ROLE_BROADCASTER);
+        engine.setClientRole(IRtcEngineEventHandler.ClientRole.CLIENT_ROLE_AUDIENCE);
         /**Please configure accessToken in the string_config file.
          * A temporary token generated in Console. A temporary token is valid for 24 hours. For details, see
          *      https://docs.agora.io/en/Agora%20Platform/token?platform=All%20Platforms#get-a-temporary-token
@@ -210,8 +210,6 @@ public class JoinChannelAudio extends BaseFragment implements View.OnClickListen
         }
         // Prevent repeated entry
         join.setEnabled(false);
-
-
     }
 
     /**

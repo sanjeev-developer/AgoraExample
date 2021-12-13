@@ -18,6 +18,7 @@
         android:theme="@style/AppTheme">
 
         <activity
+            android:exported="true"
             android:name=".MainActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:label="@string/app_name"
@@ -31,17 +32,20 @@
 
         <service
             android:name=".examples.advanced.customaudio.AudioRecordService"
-            android:exported="false" />
+            android:exported="true" />
 
         <activity
             android:name=".SettingActivity"
             android:label="@string/setting"
+            android:exported="true"
             android:screenOrientation="portrait" />
 
         <activity
             android:name=".ExampleActivity"
             android:label="@string/app_name"
+            android:exported="true"
             android:screenOrientation="portrait" />
+
 
         <!-- This tag indicates that this application requires ARCore.  This results in the Google Play
          Store downloading and installing ARCore along with the application. -->
